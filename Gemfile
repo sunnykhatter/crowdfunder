@@ -4,7 +4,7 @@ gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
+gem 'pg'
 gem 'sqlite3'
 
 
@@ -21,6 +21,24 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+
+group :tools do
+	gem 'guard-test'
+end
+
+group :development do
+	gem 'better_errors'
+	gem 'pry-rails'
+end
+
+group :test do
+
+	gem "factory_girl_rails"
+	gem "capybara"
+
+	end
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
