@@ -4,21 +4,20 @@
       <a class="brand" href="#">CrowdFunder</a>
       <div class="nav-collapse collapse">
         <ul class="nav">
-          <li class="<%= 'active' if current_page? root_path %>">
-            <%= link_to 'Home', :root %>
-          </li>
-          <li class="<%= 'active' if current_page? projects_path %>">
+
+          <li <%= yield(:li_class_hm)%>>
+              <%= link_to "Home", :root %>
+            </li>
+
+            <li <%= yield(:li_class_pj)%>>
             <%= link_to 'Projects', :projects %>
-          </li>
+            </li>
+
         </ul>
+
       </div>
     </div>
   </div>
 </div>
-<br>
-<br>
 
-<html>
-<body>
-
-</body>
+     

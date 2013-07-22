@@ -6,12 +6,33 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 
-      <%= render 'layouts/header' %>
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">CrowdFunder</a>
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+
+          <li <%= yield(:li_class_hm)%>>
+              <%= link_to "Home", :root %>
+            </li>
+
+            <li <%= yield(:li_class_pj)%>>
+            <%= link_to 'Projects', :projects %>
+            </li>
+
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+     <br><br>
 
 </head>
 <body>
-
-<%= yield %>
+<%= yield %> 
 
 </body>
 </html>

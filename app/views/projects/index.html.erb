@@ -1,12 +1,10 @@
+<% provide(:li_class_pj, "class=active") %>
 
 <h1>Listing projects</h1> <br>
 <% @projects.each do |project| %>
 
-<h2> <%= link_to project.title, project_path(project) %></h2>
+ <h2><%= link_to project.title, project_path(project) %> <h2>
 <h5> <%= project.teaser %> </h5>
-
-
-
 
 
 
