@@ -18,4 +18,10 @@ class ActionDispatch::IntegrationTest
 
   # Crowdfunder is to be changed to the name of your app
   Capybara.app = Crowdfunder::Application
+
+  teardown do
+    Capybara.reset_sessions!
+    Capybara.use_default_driver
+  end
+
 end
