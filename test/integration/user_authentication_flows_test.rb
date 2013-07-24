@@ -51,13 +51,13 @@ class UserAuthenticationFlowTest < ActionDispatch::IntegrationTest
   end
 
   test "unsuccessful log in" do
-    visit '/session/new'
+    visit '/sessions/new'
 
     fill_in "email", with: "a@b.com"
     fill_in "password", with: "invalid creds"
-    click_button "Login"
+    click_button "Log in"
 
-    assert_equal session_path, current_path
+    assert_equal sessions_path, current_path
 
     assert page.has_content?('Invalid')
   end

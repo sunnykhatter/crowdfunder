@@ -1,3 +1,7 @@
 <% provide(:li_class_hm, "class=active") %>
 
+<% if flash[:alert] %>
+    <div class="alert"><%= flash[:alert] %></div>
+ <% end %>
+
 <h1>Welcome</h1>
