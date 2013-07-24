@@ -1,4 +1,6 @@
-
+<% if flash[:alert] %>
+    <div class="alert"><%= flash[:alert] %></div>
+  <% end %>
 
 <%= form_for @user do |f| %>
   <%= f.label :first_name %>

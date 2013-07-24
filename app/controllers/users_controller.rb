@@ -14,7 +14,9 @@ class UsersController < ApplicationController
 			auto_login(@user)
 			redirect_to root_path
 		else
+			flash[:alert] = "Try again"
 			render :new
+			
 			
 		end
 
