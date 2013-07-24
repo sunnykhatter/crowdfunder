@@ -1,0 +1,24 @@
+
+
+<%= form_for @user do |f| %>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %><br />
+
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %><br />
+
+   <%= f.label :email %>
+  <%= f.text_field :email %><br />
+
+   <%= f.label :password %>
+  <%= f.text_field :password %><br />
+
+    <%= check_box_tag :remember_me, 1, params[:remember_me] %>
+  <%= label_tag :remember_me %>
+
+  <%= f.submit "Create Account", class: "btn btn-large btn-primary" %>
+  	
+
+
+
+<% end %>

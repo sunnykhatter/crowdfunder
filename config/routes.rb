@@ -2,6 +2,11 @@
     root :to => 'welcome#index'
 
     resources :projects 
+    resources :users
+    resources :sessions, only: [:new, :create, :destroy]
+    get "logout" => "sessions#destroy", :as => "logout"
+    get "login" => "sessions#new", :as => "login"
+
 
 
 

@@ -7,6 +7,7 @@ gem 'rails', '3.2.13'
 gem 'pg'
 # gem 'sqlite3'
 gem 'sorcery'
+gem 'pry'
 
 
 # Gems used only for assets and not required
@@ -32,6 +33,7 @@ end
 group :development do
 	gem 'better_errors'
 	gem 'pry-rails'
+	gem 'binding_of_caller'
 end
 
 group :test do
