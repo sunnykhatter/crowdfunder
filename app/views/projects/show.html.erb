@@ -1,2 +1,6 @@
 <% provide(:li_class_pj, "class=active") %>
+<% if flash[:alert] %>
+    <div class="notice"><%= flash[:alert] %></div>
+  <% end %>
 <h1>  <strong> <%= @project.title %></strong> </h1>
+<%= link_to "Back This Project", new_project_pledge_path(@project) %> <br>

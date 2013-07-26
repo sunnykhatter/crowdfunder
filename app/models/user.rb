@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   attr_accessible :first_name, :last_name, :email, :password
   validates :first_name, :last_name, :email, :password, presence:true
   has_many :projects
+  has_many :pledges
 
   
 

@@ -35,7 +35,7 @@ class PledgeFlowsTest < ActionDispatch::IntegrationTest
 
     # Verify that the pledge was created with the right attributes
     assert pledge = Pledge.order(:id).last
-    assert_equal user, pledge.user
+    assert_equal pledge.user, user
     assert_equal @project, pledge.project
     assert_equal 100, pledge.amount
   end
