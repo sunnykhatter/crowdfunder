@@ -32,11 +32,6 @@ class ProjectFlowsTest < ActionDispatch::IntegrationTest
   	assert find('h1:first').has_content? project1.title
 
 
-
-
-
-
-
   end
 
   test "navigation" do

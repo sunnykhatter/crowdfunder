@@ -1,0 +1,10 @@
+<% if flash[:alert] %>
+    <div class="alert"><%= flash[:alert] %></div>
+ <% end %>
+ 
+<%= form_for [:my, @project] do |f| %>
+  <h1><%= f.label :title %></h1>
+  <%= f.text_field :title %><br />
+
+  <%= f.submit %>
+<% end %>

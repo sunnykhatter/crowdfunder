@@ -1,6 +1,10 @@
   Crowdfunder::Application.routes.draw do
     root :to => 'welcome#index'
 
+    namespace :my do
+  resources :projects
+  end
+
     resources :projects do
       resources :pledges
     end

@@ -1,0 +1,17 @@
+<% if flash[:alert] %>
+    <div class="alert"><%= flash[:alert] %></div>
+ <% end %>
+
+
+<% @projects.each do |project| %>
+
+<div class = "project">
+	<%= project.title %> <br>
+
+	<%= project.teaser %> <br>
+
+</div>
+
+<br>
+
+<% end %>
